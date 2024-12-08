@@ -1,4 +1,6 @@
 .gradient {
     /* from left to right with 558cf4 to f15a54 */
-    color: linear-gradient(90deg, #558cf4 0%, #f15a54 100%);
+    background: -webkit-linear-gradient(16deg, #558cf4, #f15a54);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
