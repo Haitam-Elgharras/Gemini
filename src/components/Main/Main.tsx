@@ -3,7 +3,7 @@ import Suggestion from "./Suggestion";
 import suggestions from "../Data";
 import "./Main.css";
 import SearchBox from "./SearchBox";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PromptsContext } from "../../contexts/promptsContext";
 
 const Main = () => {
@@ -13,11 +13,15 @@ const Main = () => {
     showResult,
     resultData,
     recentPrompt,
+    setSearchText,
   } = useContext(PromptsContext);
 
-  const handleSearch = async () => {
-    onSend();
-  };
+  const [suggestion, setSuggestion] = useState("");
+  useEffect(() => {
+    if (suggestion) {
+      onSend();
+    }
+  }, [suggestion]);
 
   return (
     <div className="main flex-1">
@@ -66,14 +70,21 @@ const Main = () => {
           </div>
           <div className="cards grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 w-full justify-center p-5">
             {suggestions.map((s, i) => (
-              <Suggestion key={i} text={s.text} icon={s.icon} />
+              <div
+                onClick={() => {
+                  setSearchText(s.text);
+                  setSuggestion(s.text);
+                }}
+              >
+                <Suggestion key={i} text={s.text} icon={s.icon} />
+              </div>
             ))}
           </div>
         </div>
       )}
 
       <div className="main-buttom max-w-[900px] px-4 pb-6 mx-auto">
-        <SearchBox handleSearch={handleSearch} />
+        <SearchBox handleSearch={()=>onSend()} />
         <p className="info text-xs text-center mt-3 text-[#585858]">
           Gemini may display inaccurate info, including about people, so
           double-check its responses. Your privacy and Gemini Apps
