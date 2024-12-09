@@ -88,4 +88,5 @@ This project is deployed using [Vercel](https://vercel.com/), and the live versi
 
 ### Some pictures of the app:
 ![Home](/src/assets/demo-images/image.png)
+![loading](/src/assets/demo-images/loading.png)
 ![ask](/src/assets/demo-images/ask.png)
