@@ -75,8 +75,9 @@ const Main = () => {
                   setSearchText(s.text);
                   setSuggestion(s.text);
                 }}
+                key={i} 
               >
-                <Suggestion key={i} text={s.text} icon={s.icon} />
+                <Suggestion text={s.text} icon={s.icon} />
               </div>
             ))}
           </div>
