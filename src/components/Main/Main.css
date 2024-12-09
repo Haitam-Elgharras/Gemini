@@ -25,3 +25,14 @@
       background-position: 800px 0;
     }
   }
+
+
+  @media (max-width: 600px) {
+    .sidebar {
+      display: none;
+    }
+    .search-box {
+      padding: 5px 10px;
+    }
+    
+  }

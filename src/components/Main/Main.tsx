@@ -32,7 +32,7 @@ const Main = () => {
 
       {showResult ? (
         <div className="result max-w-[900px] h-[67vh] overflow-y-scroll mx-auto px-4 mb-3">
-          <div className="result-title my-10 mx-0 flex items-center gap-5">
+          <div className="result-title my-10 mx-0 flex items-start gap-5">
             <img src={assets.user_icon} alt="" className="w-10 rounded-full" />
             <p>{recentPrompt}</p>
           </div>

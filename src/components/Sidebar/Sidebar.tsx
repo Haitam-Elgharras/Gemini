@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { assets } from "../../assets";
 import Item from "./Item";
 import { PromptsContext } from "../../contexts/promptsContext";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,6 +27,9 @@ const Sidebar = () => {
             <p className="recent-title ms-3 text-lg mt-8 mb-5">Recent</p>
             {prevPrompts.map((prompt, index) => {
               return (
+                <div className="recent-item"
+                onClick={() => handleLoadPrompt(prompt)}
+                >
                 <Item
                   key={index}
                   icon={assets.message_icon}
@@ -33,8 +37,8 @@ const Sidebar = () => {
                     prompt.length > 20 ? prompt.slice(0, 20) + "..." : prompt
                   }
                   menuOpen={menuOpen}
-                  onLoadPrompt={() => handleLoadPrompt(prompt)}
                 />
+                </div>
               );
             })}
           </div>
