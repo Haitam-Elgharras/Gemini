@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode } from "react";
 import run from "../config/gemini";
 import usePromptsState from "../hooks/usePromptsState";
 import { formatResponse } from "../utils/responseFormatter";
