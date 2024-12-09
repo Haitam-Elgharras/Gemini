@@ -42,7 +42,7 @@ To set up the project locally, follow the instructions below:
 
 ```bash
 git clone https://github.com/Haitam-Elgharras/Gemini.git
-cd gemini-clone
+cd gemini
 ```
 
 ### 2. Install Dependencies
