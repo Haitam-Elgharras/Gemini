@@ -29,9 +29,9 @@ const Sidebar = () => {
               return (
                 <div className="recent-item"
                 onClick={() => handleLoadPrompt(prompt)}
+                key={index}
                 >
                 <Item
-                  key={index}
                   icon={assets.message_icon}
                   title={
                     prompt.length > 20 ? prompt.slice(0, 20) + "..." : prompt

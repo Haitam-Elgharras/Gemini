@@ -25,3 +25,32 @@
     opacity: 1;
   }
 }
+
+
+/* formatting styles for headings and ul with li */
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: inherit;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
